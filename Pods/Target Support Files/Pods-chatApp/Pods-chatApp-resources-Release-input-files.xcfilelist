@@ -1,0 +1,12 @@
+${PODS_ROOT}/Target Support Files/Pods-chatApp/Pods-chatApp-resources.sh
+${PODS_ROOT}/IDMPhotoBrowser/Classes/IDMPhotoBrowser.bundle
+${PODS_ROOT}/IDMPhotoBrowser/Classes/IDMPBLocalizations.bundle
+${PODS_ROOT}/IQAudioRecorderController/IQAudioRecorderController/Resources/IQAudioRecorderController.bundle
+${PODS_ROOT}/JSQMessagesViewController/JSQMessagesViewController/Assets/JSQMessagesAssets.bundle
+${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework/JSQMessagesViewController.nib
+${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework/JSQMessagesCollectionViewCellIncoming.nib
+${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework/JSQMessagesCollectionViewCellOutgoing.nib
+${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework/JSQMessagesLoadEarlierHeaderView.nib
+${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework/JSQMessagesToolbarContentView.nib
+${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework/JSQMessagesTypingIndicatorFooterView.nib
+${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++/gRPCCertificates-Cpp.bundle
