@@ -9,12 +9,44 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet weak var rePasswordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
-        // Do any additional setup after loading the view.
+       
+        
+    }
+    
+    
+    
+    @IBAction func registerButtonPressed(_ sender: UIButton) {
+        print("register")
+    }
+    
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
+        print("login")
+    }
+    
+    
+    @IBAction func backgroundTapped(_ sender: UIButton) {
     }
     
 
+    //Helping functions
+    
+    func cleanTextFields() {
+        rePasswordTextField.text = ""
+        passwordTextField.text = ""
+        emailTextField.text = ""
+    }
+    
+    func dismissKeyboard() {
+        self.view.endEditing(true)
+    }
 }
 

@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,47 +17,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the ChatApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Jt-Xf-exX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the ChatApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="3Jt-Xf-exX">
                                 <rect key="frame" x="15.666666666666657" y="74" width="358.66666666666674" height="84.333333333333314"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8GZ-eH-jDR">
                                 <rect key="frame" x="23.333333333333343" y="222.33333333333334" width="343.33333333333326" height="45.666666666666657"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rHf-lf-CSk">
                                 <rect key="frame" x="23.333333333333343" y="308" width="343.33333333333326" height="41.333333333333314"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="we8-SR-TsN">
                                 <rect key="frame" x="23.333333333333343" y="389.33333333333331" width="343.33333333333326" height="45.666666666666686"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qc-r6-fsT">
                                 <rect key="frame" x="32" y="483" width="140.33333333333334" height="57.333333333333371"/>
-                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <color key="tintColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Login">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J1Y-sW-BM8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65O-6K-3Vb">
                                 <rect key="frame" x="217.66666666666663" y="483" width="140.33333333333337" height="57.333333333333371"/>
-                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <color key="tintColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Register">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="registerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TZ0-ux-ah4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <color key="tintColor" red="0.5734147624" green="0.96841138599999999" blue="0.73790705670000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="8GZ-eH-jDR" firstAttribute="top" secondItem="3Jt-Xf-exX" secondAttribute="bottom" constant="64" id="2Bd-q0-XV3"/>
                             <constraint firstItem="rHf-lf-CSk" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.054" id="9fL-Id-Q2w"/>
@@ -83,17 +91,32 @@
                             <constraint firstItem="65O-6K-3Vb" firstAttribute="top" secondItem="we8-SR-TsN" secondAttribute="bottom" constant="48" id="yOK-qK-MUP"/>
                             <constraint firstItem="we8-SR-TsN" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.054" id="zqI-nw-JEg"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="1QH-xp-khV" appends="YES" id="Ggz-2S-8rC"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="8GZ-eH-jDR" id="roC-QQ-Sau"/>
+                        <outlet property="loginButton" destination="1qc-r6-fsT" id="Scx-oN-ti1"/>
+                        <outlet property="passwordTextField" destination="rHf-lf-CSk" id="8um-IE-Nbu"/>
+                        <outlet property="rePasswordTextField" destination="we8-SR-TsN" id="bE4-dD-thV"/>
+                        <outlet property="registerButton" destination="65O-6K-3Vb" id="A22-2w-ceo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="1QH-xp-khV">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="BYZ-38-t0r" id="Xiw-zc-cfi"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="20" y="67"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
