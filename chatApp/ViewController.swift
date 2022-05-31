@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class ViewController: UIViewController {
 
@@ -19,17 +20,30 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
     }
     
-    
-    
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-        print("register")
+        if emailTextField.text != "" && passwordTextField.text != "" && rePasswordTextField.text != "" {
+            
+            if passwordTextField.text == rePasswordTextField.text {
+                registerUser()
+            } else {
+                ProgressHUD.showError("Password and Confirm Password does not match")
+            }
+            
+          
+        } else {
+            ProgressHUD.showError("All fields are mandatory")
+        }
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        print("login")
+        if emailTextField.text != "" && passwordTextField.text != "" {
+            loginUser()
+        } else {
+            ProgressHUD.showError("E-main and Password are mandatory")
+        }
     }
     
     
@@ -39,6 +53,26 @@ class ViewController: UIViewController {
 
     //Helping functions
     
+    
+    func loginUser() {
+        ProgressHUD.show("Login...")
+        FUser.loginUserWith(email: emailTextField.text!, password: passwordTextField.text!){
+            (error) in
+            
+            if error != nil {
+                ProgressHUD.showError(error!.localizedDescription)
+                return
+            }
+            
+            self.executeApp()
+        }
+        
+    }
+    
+    func registerUser() {
+        print("register")
+    }
+    
     func cleanTextFields() {
         rePasswordTextField.text = ""
         passwordTextField.text = ""
@@ -47,6 +81,13 @@ class ViewController: UIViewController {
     
     func dismissKeyboard() {
         self.view.endEditing(true)
+    }
+    
+    func executeApp() {
+        ProgressHUD.dismiss()
+        cleanTextFields()
+        dismissKeyboard()
+    
     }
 }
 
