@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C36C73F284691FD006CAC0A /* FinishRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C36C73E284691FD006CAC0A /* FinishRegistrationViewController.swift */; };
 		3CB586942840D03600F18416 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3CB586932840D03600F18416 /* GoogleService-Info.plist */; };
 		3CF0EBFA2840CB66000721BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF0EBF92840CB66000721BF /* AppDelegate.swift */; };
 		3CF0EBFC2840CB66000721BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF0EBFB2840CB66000721BF /* SceneDelegate.swift */; };
-		3CF0EBFE2840CB66000721BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF0EBFD2840CB66000721BF /* ViewController.swift */; };
+		3CF0EBFE2840CB66000721BF /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF0EBFD2840CB66000721BF /* WelcomeViewController.swift */; };
 		3CF0EC012840CB66000721BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF0EBFF2840CB66000721BF /* Main.storyboard */; };
 		3CF0EC032840CB67000721BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CF0EC022840CB67000721BF /* Assets.xcassets */; };
 		3CF0EC062840CB67000721BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CF0EC042840CB67000721BF /* LaunchScreen.storyboard */; };
@@ -22,11 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C36C73E284691FD006CAC0A /* FinishRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRegistrationViewController.swift; sourceTree = "<group>"; };
 		3CB586932840D03600F18416 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3CF0EBF62840CB66000721BF /* chatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CF0EBF92840CB66000721BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CF0EBFB2840CB66000721BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3CF0EBFD2840CB66000721BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3CF0EBFD2840CB66000721BF /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		3CF0EC002840CB66000721BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3CF0EC022840CB67000721BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CF0EC052840CB67000721BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,6 +62,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3C36C73C284691B7006CAC0A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3CFB06462843515900C53643 /* HelperFunctions.swift */,
+				3CFB06442843513C00C53643 /* FCollectionReference.swift */,
+				3CFB06422843512000C53643 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3C36C73D284691D5006CAC0A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3CFB06402843510B00C53643 /* FUser.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		3CF0EBED2840CB66000721BF = {
 			isa = PBXGroup;
 			children = (
@@ -83,16 +103,15 @@
 			children = (
 				3CF0EBF92840CB66000721BF /* AppDelegate.swift */,
 				3CF0EBFB2840CB66000721BF /* SceneDelegate.swift */,
-				3CF0EBFD2840CB66000721BF /* ViewController.swift */,
+				3C36C73E284691FD006CAC0A /* FinishRegistrationViewController.swift */,
+				3CF0EBFD2840CB66000721BF /* WelcomeViewController.swift */,
+				3C36C73C284691B7006CAC0A /* Helpers */,
+				3C36C73D284691D5006CAC0A /* Classes */,
 				3CF0EBFF2840CB66000721BF /* Main.storyboard */,
 				3CF0EC022840CB67000721BF /* Assets.xcassets */,
 				3CF0EC042840CB67000721BF /* LaunchScreen.storyboard */,
 				3CF0EC072840CB67000721BF /* Info.plist */,
 				3CB586932840D03600F18416 /* GoogleService-Info.plist */,
-				3CFB06402843510B00C53643 /* FUser.swift */,
-				3CFB06422843512000C53643 /* Constants.swift */,
-				3CFB06442843513C00C53643 /* FCollectionReference.swift */,
-				3CFB06462843515900C53643 /* HelperFunctions.swift */,
 			);
 			path = chatApp;
 			sourceTree = "<group>";
@@ -224,8 +243,9 @@
 			files = (
 				3CFB06472843515900C53643 /* HelperFunctions.swift in Sources */,
 				3CFB06432843512000C53643 /* Constants.swift in Sources */,
-				3CF0EBFE2840CB66000721BF /* ViewController.swift in Sources */,
+				3CF0EBFE2840CB66000721BF /* WelcomeViewController.swift in Sources */,
 				3CF0EBFA2840CB66000721BF /* AppDelegate.swift in Sources */,
+				3C36C73F284691FD006CAC0A /* FinishRegistrationViewController.swift in Sources */,
 				3CF0EBFC2840CB66000721BF /* SceneDelegate.swift in Sources */,
 				3CFB06412843510B00C53643 /* FUser.swift in Sources */,
 				3CFB06452843513C00C53643 /* FCollectionReference.swift in Sources */,
