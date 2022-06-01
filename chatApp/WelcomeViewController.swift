@@ -9,7 +9,7 @@ import UIKit
 import ProgressHUD
 
 class WelcomeViewController: UIViewController {
-
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet weak var rePasswordTextField: UITextField!
@@ -17,10 +17,14 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
     
     
+    override func viewDidAppear(_ animated: Bool) {
+        loginButton.layer.cornerRadius = 20.0
+        registerButton.layer.cornerRadius = 20.0
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
+        
     }
     
     @IBAction func registerButtonPressed(_ sender: UIButton) {
@@ -32,7 +36,7 @@ class WelcomeViewController: UIViewController {
                 ProgressHUD.showError("Password and Confirm Password does not match")
             }
             
-          
+            
         } else {
             ProgressHUD.showError("All fields are mandatory")
         }
@@ -49,7 +53,7 @@ class WelcomeViewController: UIViewController {
     @IBAction func backgroundTapped(_ sender: UIButton) {
     }
     
-
+    
     //Helping functions
     func loginUser() {
         ProgressHUD.show("Login...")
@@ -66,7 +70,7 @@ class WelcomeViewController: UIViewController {
     }
     
     func registerUser() {
-//        performSegue(withIdentifier: "welcomeToFinishReg", sender: self)
+        //        performSegue(withIdentifier: "welcomeToFinishReg", sender: self)
         
         let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "FinishRegistrationViewController") as! FinishRegistrationViewController
         
@@ -74,7 +78,7 @@ class WelcomeViewController: UIViewController {
         self.navigationController?.pushViewController(secondViewController, animated: true)
         cleanTextFields()
         dismissKeyboard()
-     
+        
     }
     
     func cleanTextFields() {
@@ -93,15 +97,15 @@ class WelcomeViewController: UIViewController {
         dismissKeyboard()
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//        if segue.identifier == "welcomeToFinishReg" {
-//            let vc = segue.destination as! FinishRegistrationViewController
-//
-//            vc.email = emailTextField.text ?? ""
-//            vc.password = passwordTextField.text ?? ""
-//
-//        }
-//    }
+    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //
+    //        if segue.identifier == "welcomeToFinishReg" {
+    //            let vc = segue.destination as! FinishRegistrationViewController
+    //
+    //            vc.email = emailTextField.text ?? ""
+    //            vc.password = passwordTextField.text ?? ""
+    //
+    //        }
+    //    }
 }
 
