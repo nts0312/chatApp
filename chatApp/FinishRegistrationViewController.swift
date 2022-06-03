@@ -7,6 +7,7 @@
 
 import UIKit
 import ProgressHUD
+import simd
 
 class FinishRegistrationViewController: UIViewController {
     @IBOutlet weak var surnameTextField: UITextField!
@@ -67,7 +68,7 @@ class FinishRegistrationViewController: UIViewController {
         
         let fullName = nameTextField.text! + " " + surnameTextField.text!
         
-        var tempDictionary: Dictionary = [kFIRSTNAME: nameTextField.text!, kLASTNAME:surnameTextField.text!, kFULLNAME: fullName, kCOUNTER: countryTextField.text!, kCITY: cityTextField.text!, kPHONE: phoneTextField.text!] as [String : Any]
+        var tempDictionary: Dictionary = [kFIRSTNAME: nameTextField.text!, kLASTNAME:surnameTextField.text!, kFULLNAME: fullName, kCOUNTRY: countryTextField.text!, kCITY: cityTextField.text!, kPHONE: phoneTextField.text!] as [String : Any]
         
         
         if avatarImage == nil {
@@ -79,6 +80,7 @@ class FinishRegistrationViewController: UIViewController {
                 
                 
                 tempDictionary[kAVATAR] = avatar
+                self.finishRegistration(withValues: tempDictionary)
             }
             
         } else {
@@ -88,9 +90,24 @@ class FinishRegistrationViewController: UIViewController {
             
             
             tempDictionary[kAVATAR] = avatar
-            
+            self.finishRegistration(withValues: tempDictionary)
         }
         
+    }
+    
+    func finishRegistration(withValues: [String:Any]) {
+        
+        updateCurrentUserInFirestore(withValues: withValues) {(error) in
+            if error != nil {
+                DispatchQueue.main.async {
+                    ProgressHUD.showError(error!.localizedDescription)
+                }
+                return
+            }
+            
+            print("registered")
+            ProgressHUD.dismiss()
+        }
     }
     
     func cleanTextFields() {

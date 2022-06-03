@@ -74,7 +74,9 @@ class WelcomeViewController: UIViewController {
         
         let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "FinishRegistrationViewController") as! FinishRegistrationViewController
         
-        secondViewController.email = "sadsds"
+        secondViewController.email = emailTextField.text ?? ""
+        secondViewController.password = passwordTextField.text ?? ""
+                
         self.navigationController?.pushViewController(secondViewController, animated: true)
         cleanTextFields()
         dismissKeyboard()

@@ -204,7 +204,7 @@ class FUser {
         Auth.auth().createUser(withEmail: email, password: password, completion: { (firuser, error) in
             
             if error != nil {
-                
+                print(error)
                 completion(error)
                 return
             }
