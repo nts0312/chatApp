@@ -146,7 +146,75 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bhg-HY-7H9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1247" y="138"/>
+            <point key="canvasLocation" x="-10758" y="207"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="Tbk-OC-gng">
+            <objects>
+                <viewController id="7LZ-7C-YL8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="avS-v4-vgc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="AZw-IV-MJE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Chat" image="chat" id="aLG-8d-zjc"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E7l-JE-e7v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10007" y="897"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="A2E-RT-lZd">
+            <objects>
+                <viewController id="fM8-QP-6a3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RIY-b0-WPM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gQe-z0-RaY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="xwS-iK-dpn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cdm-eU-Z7n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9084" y="512"/>
+        </scene>
+        <!--Call-->
+        <scene sceneID="hPi-Oy-BcD">
+            <objects>
+                <viewController id="wlx-Qe-AbH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RYd-k1-uu2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="sHH-ja-SXu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Call" image="call" id="Ne3-OV-ZNd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cog-hL-lKg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9084" y="-98"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="5AI-25-mvI">
+            <objects>
+                <tabBarController storyboardIdentifier="mainApplication" id="knf-eQ-JuL" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ixf-TD-TiN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="wlx-Qe-AbH" kind="relationship" relationship="viewControllers" id="n9I-Sx-Vhc"/>
+                        <segue destination="7LZ-7C-YL8" kind="relationship" relationship="viewControllers" id="RY5-IZ-thh"/>
+                        <segue destination="fM8-QP-6a3" kind="relationship" relationship="viewControllers" id="Bmw-M8-Mv7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TPa-GP-EBG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10006" y="208"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -268,7 +336,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="551.20000000000005" y="-119.1904047976012"/>
+            <point key="canvasLocation" x="-11564" y="207"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FVd-QK-PmS">
@@ -286,11 +354,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W3B-Hy-DdC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-388" y="-119.1904047976012"/>
+            <point key="canvasLocation" x="-12258" y="208"/>
         </scene>
     </scenes>
     <resources>
         <image name="avatarPlaceholder" width="101" height="101"/>
+        <image name="call" width="30" height="30"/>
+        <image name="chat" width="25" height="25"/>
+        <image name="settings" width="25" height="25"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

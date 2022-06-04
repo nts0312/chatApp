@@ -97,17 +97,10 @@ class WelcomeViewController: UIViewController {
         ProgressHUD.dismiss()
         cleanTextFields()
         dismissKeyboard()
+        let mainView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainApplication")
+        as! UITabBarController
+        mainView.modalPresentationStyle = .fullScreen
+        self.present(mainView, animated: true,completion: nil)
     }
-    
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //
-    //        if segue.identifier == "welcomeToFinishReg" {
-    //            let vc = segue.destination as! FinishRegistrationViewController
-    //
-    //            vc.email = emailTextField.text ?? ""
-    //            vc.password = passwordTextField.text ?? ""
-    //
-    //        }
-    //    }
 }
 

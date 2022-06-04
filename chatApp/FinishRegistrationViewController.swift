@@ -104,10 +104,19 @@ class FinishRegistrationViewController: UIViewController {
                 }
                 return
             }
-            
-            print("registered")
             ProgressHUD.dismiss()
+            self.callToMainScreen()
         }
+    }
+    
+    func callToMainScreen() {
+        cleanTextFields()
+        dismissKeyboard()
+        
+        let mainView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainApplication")
+        as! UITabBarController
+        mainView.modalPresentationStyle = .fullScreen
+        self.present(mainView, animated: true,completion: nil)
     }
     
     func cleanTextFields() {
