@@ -76,7 +76,7 @@ class WelcomeViewController: UIViewController {
         
         secondViewController.email = emailTextField.text ?? ""
         secondViewController.password = passwordTextField.text ?? ""
-                
+        
         self.navigationController?.pushViewController(secondViewController, animated: true)
         cleanTextFields()
         dismissKeyboard()
@@ -97,8 +97,12 @@ class WelcomeViewController: UIViewController {
         ProgressHUD.dismiss()
         cleanTextFields()
         dismissKeyboard()
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: USER_DID_LOGIN_NOTIFICATION), object: nil, userInfo: [kUSERID: FUser.currentId()])
+        
         let mainView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainApplication")
         as! UITabBarController
+        
         mainView.modalPresentationStyle = .fullScreen
         self.present(mainView, animated: true,completion: nil)
     }

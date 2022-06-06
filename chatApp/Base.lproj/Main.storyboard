@@ -168,12 +168,28 @@
         <!--Settings-->
         <scene sceneID="A2E-RT-lZd">
             <objects>
-                <viewController id="fM8-QP-6a3" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settings" id="fM8-QP-6a3" customClass="SettingsViewController" customModule="chatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RIY-b0-WPM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qat-oS-sta">
+                                <rect key="frame" x="94" y="275.5" width="187.5" height="67"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Logout"/>
+                                <connections>
+                                    <action selector="logOutButtonPressed:" destination="fM8-QP-6a3" eventType="touchUpInside" id="yVb-EJ-ZJr"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="gQe-z0-RaY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qat-oS-sta" firstAttribute="centerX" secondItem="gQe-z0-RaY" secondAttribute="centerX" id="K2w-Yw-QpB"/>
+                            <constraint firstItem="Qat-oS-sta" firstAttribute="height" secondItem="RIY-b0-WPM" secondAttribute="height" multiplier="0.1" id="OmS-v5-phP"/>
+                            <constraint firstItem="Qat-oS-sta" firstAttribute="width" secondItem="RIY-b0-WPM" secondAttribute="width" multiplier="0.5" id="Vam-JT-ou4"/>
+                            <constraint firstItem="Qat-oS-sta" firstAttribute="centerY" secondItem="gQe-z0-RaY" secondAttribute="centerY" id="xjK-Vg-dSc"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="xwS-iK-dpn"/>
                 </viewController>
@@ -200,7 +216,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="5AI-25-mvI">
             <objects>
-                <tabBarController storyboardIdentifier="mainApplication" id="knf-eQ-JuL" sceneMemberID="viewController">
+                <tabBarController restorationIdentifier="mainApplication" storyboardIdentifier="mainApplication" id="knf-eQ-JuL" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ixf-TD-TiN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -219,7 +235,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="chatApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="welcome" id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="chatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
