@@ -16,7 +16,6 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
     
-    
     override func viewDidAppear(_ animated: Bool) {
         loginButton.layer.cornerRadius = 20.0
         registerButton.layer.cornerRadius = 20.0
@@ -24,7 +23,6 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     @IBAction func registerButtonPressed(_ sender: UIButton) {
@@ -36,13 +34,13 @@ class WelcomeViewController: UIViewController {
                 ProgressHUD.showError("Password and Confirm Password does not match")
             }
             
-            
         } else {
             ProgressHUD.showError("All fields are mandatory")
         }
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
+        
         if emailTextField.text != "" && passwordTextField.text != "" {
             loginUser()
         } else {
@@ -50,9 +48,7 @@ class WelcomeViewController: UIViewController {
         }
     }
     
-    @IBAction func backgroundTapped(_ sender: UIButton) {
-    }
-    
+    @IBAction func backgroundTapped(_ sender: UIButton) {}
     
     //Helping functions
     func loginUser() {
@@ -70,7 +66,6 @@ class WelcomeViewController: UIViewController {
     }
     
     func registerUser() {
-        //        performSegue(withIdentifier: "welcomeToFinishReg", sender: self)
         
         let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "FinishRegistrationViewController") as! FinishRegistrationViewController
         
@@ -80,7 +75,6 @@ class WelcomeViewController: UIViewController {
         self.navigationController?.pushViewController(secondViewController, animated: true)
         cleanTextFields()
         dismissKeyboard()
-        
     }
     
     func cleanTextFields() {
@@ -94,6 +88,7 @@ class WelcomeViewController: UIViewController {
     }
     
     func executeApp() {
+        
         ProgressHUD.dismiss()
         cleanTextFields()
         dismissKeyboard()

@@ -21,7 +21,6 @@ class FinishRegistrationViewController: UIViewController {
     var password: String = ""
     var avatarImage: UIImage?
     
-    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.setHidesBackButton(true, animated: true)
     }
@@ -30,12 +29,9 @@ class FinishRegistrationViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    
-    
     @IBAction func doneButtonPressed(_ sender: UIButton) {
         dismissKeyboard()
         ProgressHUD.show("Registering...")
-        
         
         if nameTextField.text != "" && surnameTextField.text != "" && countryTextField.text != "" && cityTextField.text != "" && phoneTextField.text != "" {
             
@@ -46,14 +42,12 @@ class FinishRegistrationViewController: UIViewController {
                     ProgressHUD.showError(error!.localizedDescription)
                     return
                 }
-                
                 self.registerUser()
             }
             
         } else {
             ProgressHUD.showError("All Fields are mandatory")
         }
-        
     }
     
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
@@ -61,7 +55,6 @@ class FinishRegistrationViewController: UIViewController {
         cleanTextFields()
         dismissKeyboard()
         self.navigationController?.popViewController(animated: true)
-        
     }
     
     func registerUser() {
@@ -70,14 +63,12 @@ class FinishRegistrationViewController: UIViewController {
         
         var tempDictionary: Dictionary = [kFIRSTNAME: nameTextField.text!, kLASTNAME:surnameTextField.text!, kFULLNAME: fullName, kCOUNTRY: countryTextField.text!, kCITY: cityTextField.text!, kPHONE: phoneTextField.text!] as [String : Any]
         
-        
         if avatarImage == nil {
             imageFromInitials(firstName: nameTextField.text!, lastName: surnameTextField.text!) {
                 (avatatInitials) in
                 
                 let avatarImage = avatatInitials.jpegData(compressionQuality: 0.7)
                 let avatar = avatarImage!.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: 0))
-                
                 
                 tempDictionary[kAVATAR] = avatar
                 self.finishRegistration(withValues: tempDictionary)
@@ -88,11 +79,9 @@ class FinishRegistrationViewController: UIViewController {
             let avatarData = avatarImage?.jpegData(compressionQuality: 0.7)
             let avatar = avatarData!.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: 0))
             
-            
             tempDictionary[kAVATAR] = avatar
             self.finishRegistration(withValues: tempDictionary)
         }
-        
     }
     
     func finishRegistration(withValues: [String:Any]) {
