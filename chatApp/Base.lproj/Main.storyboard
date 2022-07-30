@@ -213,6 +213,81 @@
             </objects>
             <point key="canvasLocation" x="-9084" y="-98"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="ALn-bo-kSx">
+            <objects>
+                <tableViewController id="knT-2e-KTc" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="9G5-jG-poT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="t2Q-yl-2Pl">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="121"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hyE-jM-a22">
+                                    <rect key="frame" x="4" y="36.5" width="367.5" height="49"/>
+                                    <segments>
+                                        <segment title="First"/>
+                                        <segment title="Second"/>
+                                        <segment title=""/>
+                                    </segments>
+                                </segmentedControl>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="hyE-jM-a22" firstAttribute="centerX" secondItem="t2Q-yl-2Pl" secondAttribute="centerX" id="Mtz-Aa-61s"/>
+                                <constraint firstItem="hyE-jM-a22" firstAttribute="height" secondItem="t2Q-yl-2Pl" secondAttribute="height" multiplier="0.4" id="ZcD-bT-Or0"/>
+                                <constraint firstItem="hyE-jM-a22" firstAttribute="width" secondItem="t2Q-yl-2Pl" secondAttribute="width" multiplier="0.98" id="h6U-e3-5IQ"/>
+                                <constraint firstItem="hyE-jM-a22" firstAttribute="centerY" secondItem="t2Q-yl-2Pl" secondAttribute="centerY" id="wzt-qF-BGt"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="113" id="cCb-4M-ywH" customClass="UserTableViewCell" customModule="chatApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="165.5" width="375" height="113"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cCb-4M-ywH" id="xJJ-YU-Tb4">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="113"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="q4F-Xk-dof">
+                                            <rect key="frame" x="18" y="16" width="90" height="81"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name Please sdsdsdsdsd" textAlignment="natural" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="tEv-wG-EE1">
+                                            <rect key="frame" x="139.5" y="31.5" width="217.5" height="50"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="tEv-wG-EE1" secondAttribute="trailing" constant="2" id="Hof-0S-rPt"/>
+                                        <constraint firstItem="tEv-wG-EE1" firstAttribute="height" secondItem="xJJ-YU-Tb4" secondAttribute="height" multiplier="0.44" id="Rrx-Db-cuT"/>
+                                        <constraint firstItem="q4F-Xk-dof" firstAttribute="width" secondItem="xJJ-YU-Tb4" secondAttribute="width" multiplier="0.24" id="TWH-3W-BMv"/>
+                                        <constraint firstItem="q4F-Xk-dof" firstAttribute="leading" secondItem="xJJ-YU-Tb4" secondAttribute="leadingMargin" constant="2" id="Uoj-I9-6FT"/>
+                                        <constraint firstItem="tEv-wG-EE1" firstAttribute="width" secondItem="xJJ-YU-Tb4" secondAttribute="width" multiplier="0.58" id="buY-1d-Mhp"/>
+                                        <constraint firstItem="q4F-Xk-dof" firstAttribute="height" secondItem="xJJ-YU-Tb4" secondAttribute="height" multiplier="0.72" id="dPr-aB-lMQ"/>
+                                        <constraint firstItem="tEv-wG-EE1" firstAttribute="centerY" secondItem="xJJ-YU-Tb4" secondAttribute="centerY" id="gJE-hf-HNB"/>
+                                        <constraint firstItem="q4F-Xk-dof" firstAttribute="centerY" secondItem="xJJ-YU-Tb4" secondAttribute="centerY" id="p37-3Q-B4J"/>
+                                        <constraint firstItem="tEv-wG-EE1" firstAttribute="leading" secondItem="q4F-Xk-dof" secondAttribute="trailing" constant="16" id="xCg-zY-2qb"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avatarImageView" destination="q4F-Xk-dof" id="Jga-aN-bjO"/>
+                                    <outlet property="fullNameLabel" destination="tEv-wG-EE1" id="6SV-m9-uHZ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="knT-2e-KTc" id="eRZ-VW-vvy"/>
+                            <outlet property="delegate" destination="knT-2e-KTc" id="iTd-HL-5Dc"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2sF-hl-lpZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8487" y="-491"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5AI-25-mvI">
             <objects>
